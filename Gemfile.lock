@@ -319,6 +319,7 @@ DEPENDENCIES
   puma
   rails (= 4.2.0)
   rails_12factor
+  redis
   roadie-rails
   rspec-rails (~> 3.0)
   sass-rails (~> 5.0)
