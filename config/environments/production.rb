@@ -68,26 +68,30 @@ Rails.application.configure do
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
 
-  config.action_mailer.default_url_options = {
-    host: ENV['MAILER_DEFAULT_HOST'],
-    protocol: ENV['MAILER_DEFAULT_PROTOCOL'] || 'https'
-  }
 
-  config.action_mailer.default_options  = {
-    from: ENV['MAILER_DEFAULT_FROM_EMAIL'],
-    reply_to: ENV['MAILER_DEFAULT_REPLY_TO']
-  }
-
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    address:              ENV['MAILER_ADDRESS'],
-    domain:               ENV['MAILER_DOMAIN'],
-    user_name:            ENV['MAILER_USERNAME'],
-    password:             ENV['MAILER_PASSWORD'],
-    port:                 587,
-    authentication:       'plain',
-    enable_starttls_auto: true }
-
+    
+    
+    
+    
+config.action_mailer.default_url_options = { :host =&gt; 'chkmein.herokuapp.com'} 
+config.action_mailer.delivery_method = :smtp
+config.action_mailer.smtp_settings = {
+    address: "smtp.sendgrid.net",
+    port: 25,
+    domain: "heroku.com", 
+    authentication: "plain",
+    enable_starttls_auto: true,
+    user_name: ENV["SENDGRID_USERNAME"],
+    password: ENV["SENDGRID_PASSWORD"]
+}
+    
+    
+    
+    
+    
+    
+    
+    
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
   config.i18n.fallbacks = true
