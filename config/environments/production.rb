@@ -78,7 +78,7 @@ Rails.application.configure do
 config.action_mailer.default_url_options = { :host => "http:\\chkmein.herokuapp.com"} 
 config.action_mailer.delivery_method = :smtp
 config.action_mailer.smtp_settings = {
-    from: "sbarlea@gmail.com"
+    from: "sbarlea@gmail.com",
     address: "smtp.sendgrid.net",
     port: 587,
     domain: "heroku.com", 
