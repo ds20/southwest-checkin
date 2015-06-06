@@ -4,6 +4,7 @@ ruby '2.2.2'
 gem 'rails_12factor'
 gem 'redis'
 gem 'figaro'
+gem 'unicorn'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 # Use postgresql as the database for Active Record
@@ -38,7 +39,7 @@ gem 'roadie-rails' # Inline styles for emails
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Puma as the app server
-gem 'puma'
+# gem 'puma'
 
 # Use Mina for deployment
 gem 'mina'
