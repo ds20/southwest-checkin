@@ -71,7 +71,10 @@ Rails.application.configure do
 
 
 
-    
+config.action_mailer.default_options  = {
+    from: "sbarlea@gmail.com",
+    reply_to: "sbarlea@gmail.com"
+  }
     
     
     
